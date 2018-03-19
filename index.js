@@ -9,8 +9,14 @@ function setCart(c) {
   return cart;
 }
 
-function addToCart(item) {
+function addToCart(itemName) {
  // write your code here
+ 
+ var price = parseInt(Math.random() * (100 - 1) + 1) ;
+ var newItem = {[itemName]: price};
+ cart.push(newItem);
+ console.log(`${itemName} has been added to your cart.`);
+ return cart;
 }
 
 function viewCart() {
